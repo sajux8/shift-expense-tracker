@@ -17,6 +17,7 @@ Then open the local URL in a browser. Use the browser's install option to add it
 - Responsive dashboard and Home, Shifts, Expenses, and Insights views
 - Shift entry with overnight time handling, break subtraction, rate snapshot, tips, and live estimate
 - Expense entry with category, date, and note
+- Expense payment method tracking and a category spending breakdown
 - Monthly totals, activity feed, dark mode, CSV export, and app-shell service worker
 - Multiple workplaces, workplace-specific default hourly rates, and a selectable shift workplace
 - Daily shift subtotals and weekly hours summaries within the selected month
