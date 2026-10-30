@@ -19,6 +19,7 @@ Then open the local URL in a browser. Use the browser's install option to add it
 - Expense entry with category, date, and note
 - Monthly totals, activity feed, dark mode, CSV export, and app-shell service worker
 - Multiple workplaces, workplace-specific default hourly rates, and a selectable shift workplace
+- Daily shift subtotals and weekly hours summaries within the selected month
 - Editing and undoable deletion for individual shifts and expenses
 - Local device storage through `localStorage`
 
