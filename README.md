@@ -28,8 +28,8 @@ Then open the local URL in a browser. Use the browser's install option to add it
 
 ## Current prototype boundary
 
-The app supports Supabase email/password authentication and cloud sync after the migration is applied. It keeps a local browser copy, has no realtime multi-device updates, account deletion flow, or payslip entry, and estimates pay at a flat rate.
+The app supports Supabase email/password authentication, password recovery, and cloud sync after the migration is applied. It keeps a local browser copy, has no realtime multi-device updates, account deletion flow, or payslip entry, and estimates pay at a flat rate.
 
 ## Supabase setup
 
-The browser client is configured in supabase-config.js with the project URL and Supabase publishable key. Supabase documents publishable keys for frontend clients; database passwords and secret/service-role keys must stay private. Before signing in, apply the SQL migration in supabase/migrations/ from the Supabase Dashboard SQL Editor. Existing local entries are offered for upload the first time you sign in to an empty cloud account.
+The browser client is configured in supabase-config.js with the project URL and Supabase publishable key. Supabase documents publishable keys for frontend clients; database passwords and secret/service-role keys must stay private. Before signing in, apply the SQL migration in supabase/migrations/ from the Supabase Dashboard SQL Editor. Set the Auth Site URL and Redirect URLs to https://shift-expense-tracker.vercel.app/ for email confirmation and password recovery. Existing local entries are offered for upload the first time you sign in to an empty cloud account.
