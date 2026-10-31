@@ -33,6 +33,7 @@ Then open the local URL in a browser. Use the browser's install option to add it
 - Month-to-month comparison for income, spending, and hours worked
 - Upcoming payday forecasts from weekly, biweekly, or monthly workplace schedules
 - Print-ready monthly report for saving or printing as PDF
+- Selected-month CSV export for shifts, income, bills, expenses, and payslips
 - Daily shift subtotals and weekly hours summaries within the selected month
 - Overlap warning before saving a shift that conflicts with another entry
 - Editing and undoable deletion for individual shifts and expenses
