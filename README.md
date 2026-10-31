@@ -23,6 +23,7 @@ Then open the local URL in a browser. Use the browser's install option to add it
 - Reusable shift templates with one tap to prefill workplace, times, and break duration
 - Clock in and out from the dashboard, with an elapsed timer and a reviewable shift entry at clock-out
 - Separate tips, service charge, bonus, and other income entries included in monthly totals
+- Six-month income-versus-spending chart on Insights
 - Daily shift subtotals and weekly hours summaries within the selected month
 - Overlap warning before saving a shift that conflicts with another entry
 - Editing and undoable deletion for individual shifts and expenses
