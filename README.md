@@ -30,7 +30,7 @@ Then open the local URL in a browser. Use the browser's install option to add it
 
 ## Current prototype boundary
 
-The app supports Supabase email/password authentication, password recovery, and cloud sync after its migrations are applied. It keeps a local browser copy, has no realtime multi-device updates, account deletion flow, or payslip entry, and estimates pay at a flat rate.
+The app supports Supabase email/password authentication, password recovery, and cloud sync after its migrations are applied. Without the shift templates migration, sign-in and existing cloud data continue working while templates remain local to the device. It keeps a local browser copy, has no realtime multi-device updates, account deletion flow, or payslip entry, and estimates pay at a flat rate.
 
 ## Supabase setup
 
