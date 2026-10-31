@@ -28,3 +28,4 @@ Then open the local URL in a browser. Use the browser's install option to add it
 ## Current prototype boundary
 
 This is a front-end prototype. Data stays in the current browser profile; accounts, server persistence, encrypted sync, real multi-device sessions, account deletion, payslips, recurring bills, and backend security policies are not wired yet. The pay estimate uses a flat hourly rate and rounds the final total to whole rupees, as the plan specifies whole-unit money for its Sri Lankan rupee example. A production version should add an authenticated backend before storing sensitive financial data.
+- Search expenses by category, note, payment method, or date, and filter by category.
