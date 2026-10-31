@@ -25,6 +25,7 @@ Then open the local URL in a browser. Use the browser's install option to add it
 - Separate tips, service charge, bonus, and other income entries included in monthly totals
 - Six-month income-versus-spending chart on Insights
 - Payslip records with gross/net amounts and period estimate comparisons
+- Bills page with due dates, paid/skip actions, recurring schedules, and automatic expense entries when paid
 - Daily shift subtotals and weekly hours summaries within the selected month
 - Overlap warning before saving a shift that conflicts with another entry
 - Editing and undoable deletion for individual shifts and expenses
@@ -37,4 +38,4 @@ The app supports Supabase email/password authentication, password recovery, and 
 
 ## Supabase setup
 
-The browser client is configured in supabase-config.js with the project URL and Supabase publishable key. Supabase documents publishable keys for frontend clients; database passwords and secret/service-role keys must stay private. Apply unapplied SQL files in `supabase/migrations/` once and in filename order from the Supabase Dashboard SQL Editor. If the initial schema is already installed, apply migrations `202610310002_shift_templates.sql`, `202610310003_income_entries.sql`, and `202610310004_payslip_comparison.sql` in order; skip files already applied. These add template, extra-income, and payslip sync. Set the Auth Site URL and Redirect URLs to https://shift-expense-tracker.vercel.app/ for email confirmation and password recovery. Existing local entries are offered for upload the first time you sign in to an empty cloud account.
+The browser client is configured in supabase-config.js with the project URL and Supabase publishable key. Supabase documents publishable keys for frontend clients; database passwords and secret/service-role keys must stay private. Apply unapplied SQL files in `supabase/migrations/` once and in filename order from the Supabase Dashboard SQL Editor. If the initial schema is already installed, apply migrations `202610310002_shift_templates.sql` through `202610310005_recurring_bills.sql` in order; skip files already applied. These add template, extra-income, payslip, and bill sync. Set the Auth Site URL and Redirect URLs to https://shift-expense-tracker.vercel.app/ for email confirmation and password recovery. Existing local entries are offered for upload the first time you sign in to an empty cloud account.
