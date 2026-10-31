@@ -16,13 +16,14 @@ create table public.workplaces (
   hourly_rate integer not null check (hourly_rate > 0),
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
-  deleted_at timestamptz
+  deleted_at timestamptz,
+  constraint workplaces_id_user_unique unique (id, user_id)
 );
 
 create table public.shifts (
   id uuid primary key default gen_random_uuid(),
   user_id uuid not null references auth.users(id) on delete cascade,
-  workplace_id uuid references public.workplaces(id) on delete set null,
+  workplace_id uuid,
   workplace_name text not null,
   shift_date date not null,
   start_time time not null,
@@ -34,7 +35,9 @@ create table public.shifts (
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now(),
   deleted_at timestamptz,
-  constraint shifts_different_start_and_end check (start_time <> end_time)
+  constraint shifts_different_start_and_end check (start_time <> end_time),
+  constraint shifts_workplace_same_user foreign key (workplace_id, user_id)
+    references public.workplaces(id, user_id)
 );
 
 create table public.expenses (
