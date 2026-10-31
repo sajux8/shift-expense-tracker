@@ -20,6 +20,7 @@ Then open the local URL in a browser. Use the browser's install option to add it
 - Expense payment method tracking and a category spending breakdown
 - Monthly totals, activity feed, dark mode, CSV export, full JSON backup and restore, and app-shell service worker
 - Multiple workplaces, workplace-specific default hourly rates, and a selectable shift workplace
+- Reusable shift templates with one tap to prefill workplace, times, and break duration
 - Daily shift subtotals and weekly hours summaries within the selected month
 - Overlap warning before saving a shift that conflicts with another entry
 - Editing and undoable deletion for individual shifts and expenses
@@ -28,8 +29,8 @@ Then open the local URL in a browser. Use the browser's install option to add it
 
 ## Current prototype boundary
 
-The app supports Supabase email/password authentication, password recovery, and cloud sync after the migration is applied. It keeps a local browser copy, has no realtime multi-device updates, account deletion flow, or payslip entry, and estimates pay at a flat rate.
+The app supports Supabase email/password authentication, password recovery, and cloud sync after its migrations are applied. It keeps a local browser copy, has no realtime multi-device updates, account deletion flow, or payslip entry, and estimates pay at a flat rate.
 
 ## Supabase setup
 
-The browser client is configured in supabase-config.js with the project URL and Supabase publishable key. Supabase documents publishable keys for frontend clients; database passwords and secret/service-role keys must stay private. Before signing in, apply the SQL migration in supabase/migrations/ from the Supabase Dashboard SQL Editor. Set the Auth Site URL and Redirect URLs to https://shift-expense-tracker.vercel.app/ for email confirmation and password recovery. Existing local entries are offered for upload the first time you sign in to an empty cloud account.
+The browser client is configured in supabase-config.js with the project URL and Supabase publishable key. Supabase documents publishable keys for frontend clients; database passwords and secret/service-role keys must stay private. Apply unapplied SQL files in `supabase/migrations/` once and in filename order from the Supabase Dashboard SQL Editor. If the initial schema is already installed, apply only `202610310002_shift_templates.sql`; it creates the table used by template cloud sync. Set the Auth Site URL and Redirect URLs to https://shift-expense-tracker.vercel.app/ for email confirmation and password recovery. Existing local entries are offered for upload the first time you sign in to an empty cloud account.
