@@ -26,6 +26,7 @@ Then open the local URL in a browser. Use the browser's install option to add it
 - Six-month income-versus-spending chart on Insights
 - Payslip records with gross/net amounts and period estimate comparisons
 - Bills page with due dates, paid/skip actions, recurring schedules, and automatic expense entries when paid
+- Configurable in-app reminders for bills due soon and shift timers running over 12 hours
 - Daily shift subtotals and weekly hours summaries within the selected month
 - Overlap warning before saving a shift that conflicts with another entry
 - Editing and undoable deletion for individual shifts and expenses
